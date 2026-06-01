@@ -359,7 +359,7 @@
   
     
   
-  Citing & Support
+  Cite & Contact
 
       </a>
     </li>
@@ -502,6 +502,17 @@
     <span class="md-ellipsis">
       
         Quick start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#used-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Used by
       
     </span>
   </a>
@@ -1453,7 +1464,7 @@
   <span class="md-ellipsis">
     
   
-    Citing & Support
+    Cite & Contact
   
 
     
@@ -1526,6 +1537,17 @@
     <span class="md-ellipsis">
       
         Quick start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#used-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Used by
       
     </span>
   </a>
@@ -1737,7 +1759,7 @@ for filtering, classification, and catalog analysis.</p>
 </div>
 <div class="lc-card-body">
 <h3><a href="dmdt/">dm-dt maps</a></h3>
-<p>2D histograms of Δmag vs log-Δt for all observation pairs — fixed-size image representation for CNN-based variability classifiers.</p>
+<p>2D histograms of Δmag vs log-Δt for all observation pairs, providing a fixed-size image representation for CNN-based variability classifiers.</p>
 </div>
 </div>
 
@@ -1765,6 +1787,67 @@ for filtering, classification, and catalog analysis.</p>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="n">dmdt</span> <span class="o">=</span> <span class="n">lc</span><span class="o">.</span><span class="n">DmDt</span><span class="o">.</span><span class="n">from_borders</span><span class="p">(</span><span class="n">min_lgdt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_lgdt</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_abs_dm</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">lgdt_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">dm_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="p">[])</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">matrix</span> <span class="o">=</span> <span class="n">dmdt</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>   <span class="c1"># shape (16, 16)</span>
 </code></pre></div>
+<hr />
+<h2 id="used-by">Used by<a class="headerlink" href="#used-by" title="Permanent link">&para;</a></h2>
+<div class="lc-used-by">
+
+<div class="lc-ub-col">
+<section class="lc-ub-section">
+<h3 class="lc-ub-heading">Alert brokers</h3>
+<p class="lc-ub-desc">AMPEL, ANTARES, and Fink use <code>light-curve</code> for real-time feature extraction
+when classifying on the order of a million alerts per night from the Zwicky Transient Facility
+and the Rubin Observatory.</p>
+<div class="lc-ub-logos">
+  <a href="https://ampelproject.github.io" target="_blank" rel="noopener" class="lc-broker-logo">
+    <img src="assets/brokers/ampel.png" alt="AMPEL">
+  </a>
+  <a href="https://antares.noirlab.edu" target="_blank" rel="noopener" class="lc-broker-logo">
+    <img src="assets/brokers/antares.svg" alt="ANTARES">
+  </a>
+  <a href="https://fink-broker.org" target="_blank" rel="noopener" class="lc-broker-logo">
+    <img src="assets/brokers/fink.svg" alt="Fink">
+  </a>
+</div>
+</section>
+
+<section class="lc-ub-section">
+<h3 class="lc-ub-heading">The SNAD team</h3>
+<a href="https://snad.space" target="_blank" rel="noopener" class="lc-broker-logo">
+  <img src="assets/brokers/snad.png" alt="SNAD">
+</a>
+<p class="lc-ub-desc">The <a href="https://snad.space" target="_blank" rel="noopener">SNAD</a>
+anomaly-detection group uses <code>light-curve</code> to analyze hundreds of millions of
+Zwicky Transient Facility light curves from data releases, powering large-scale analyses
+and the public <a href="https://ztf.snad.space" target="_blank" rel="noopener">SNAD ZTF Viewer</a>.</p>
+</section>
+</div>
+
+<div class="lc-ub-col">
+<section class="lc-ub-section">
+<h3 class="lc-ub-heading">Software</h3>
+<div class="lc-ub-pkg-grid">
+  <div class="lc-ub-pkg">
+    <div class="lc-ub-pkg-logo-wrap"><a href="https://github.com/quatrope/feets" target="_blank" rel="noopener"><img src="assets/packages/feets.svg" alt="feets" class="lc-ub-pkg-logo"></a></div>
+    <span class="lc-ub-pkg-desc">Feature extraction library for time series with Dask-parallel processing and a scikit-learn-style API, using light-curve as its computational backend</span>
+  </div>
+  <div class="lc-ub-pkg">
+    <div class="lc-ub-pkg-logo-wrap"><a href="https://github.com/COINtoolbox/RESSPECT" target="_blank" rel="noopener"><img src="assets/packages/resspect.png" alt="RESSPECT" class="lc-ub-pkg-logo"></a></div>
+    <span class="lc-ub-pkg-desc">Photometric supernova classification pipeline for LSST, with active learning, developed by LSST DESC and COIN</span>
+  </div>
+  <div class="lc-ub-pkg">
+    <div class="lc-ub-pkg-logo-wrap"><a href="https://github.com/VTDA-Group/superphot-plus" target="_blank" rel="noopener"><img src="assets/packages/superphot-plus.svg" alt="superphot+" class="lc-ub-pkg-logo lc-ub-pkg-logo--wordmark"></a></div>
+    <span class="lc-ub-pkg-desc">Real-time supernova light curve fitting and classification for ZTF/Rubin</span>
+  </div>
+</div>
+</section>
+</div>
+
+</div>
+
+<section class="lc-ub-section">
+<h3 class="lc-ub-heading">Publications</h3>
+<p class="lc-ub-desc"><strong>Used in <a href="https://ui.adsabs.harvard.edu/public-libraries/hcwBtIKwQ3yJjT784upA7A" target="_blank" rel="noopener">30+ research publications</a>.</strong></p>
+</section>
 
 
 
